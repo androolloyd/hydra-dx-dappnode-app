@@ -20,4 +20,4 @@ COPY --from=builder /hydra-dx-node /hydra-dx-node
 
 WORKDIR /hydra-dx-node
 
-ENTRYPOINT ./target/release/hydra-dx --chain lerna --ws-external
+ENTRYPOINT ./target/release/hydra-dx ${EXTRA_OPTS}

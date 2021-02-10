@@ -26,13 +26,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/androolloyd/Hydra-DX.git"
+    "url": "https://github.com/androolloyd/hydra-dx-dappnode-app.git"
   },
   "bugs": {
-    "url": "https://github.com/androolloyd/Hydra-DX/issues"
+    "url": "https://github.com/androolloyd/hydra-dx-dappnode-app.git/issues"
   },
   "links": {
     "homepage": "http://hydradx-node.dappnode"
   },
-  "license": "MIT"
+  "license": "GPL v3"
 }
