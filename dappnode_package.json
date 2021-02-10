@@ -1,0 +1,38 @@
+{
+  "name": "hydradx-node.public.dappnode.eth",
+  "version": "0.1.1",
+  "upstreamVersion": "master",
+  "description": "CROSS-CHAIN LIQUIDITY PROTOCOL BUILT ON SUBSTRATE",
+  "type": "service",
+  "author": "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)",
+  "contributors": [
+    "HYRDA"
+  ],
+  "categories": [
+    "Blockchain"
+  ],
+  "keywords": [
+    "hydra"
+  ],
+  "globalEnvs": {
+    "all": true
+  },
+  "backup": [
+    {
+      "name": "keystore",
+      "path": "/root/.local/secret/keystore",
+      "service": "validator"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/androolloyd/Hydra-DX.git"
+  },
+  "bugs": {
+    "url": "https://github.com/androolloyd/Hydra-DX/issues"
+  },
+  "links": {
+    "homepage": "http://hydradx-node.dappnode"
+  },
+  "license": "MIT"
+}

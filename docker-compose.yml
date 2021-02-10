@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  hydradx-node.public.dappnode.eth:
+    build:
+      context: ./build
+      args:
+        UPSTREAM_VERSION: master
+    image: "hydradx-node.public.dappnode.eth:0.1.1"
+    restart: unless-stopped
+volumes:
+  hydra: {}
