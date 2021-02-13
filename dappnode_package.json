@@ -37,9 +37,8 @@
   },
   "links": {
     "homepage": "https://hydradx.io",
-    "api": "http://sidecar.hydradx-node.dappnode",
-    "ui": "http://ipfs.dappnode:8080/ipns/dotapps.io/",
-    "gateway": "http://chain.hydradx-node.dappnode"
+    "api": "http://sidecar.hydradx.public.dappnode:7080",
+    "ui": "http://ipfs.dappnode:8080/ipns/dotapps.io/"
   },
   "license": "GPL v3"
 }
