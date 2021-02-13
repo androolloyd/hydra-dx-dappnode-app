@@ -1,10 +1,14 @@
 {
-  "name": "hydradx-node.public.dappnode.eth",
+  "name": "hydradx.public.dappnode.eth",
   "version": "0.1.1",
   "upstreamVersion": "master",
+  "upstreamRepo": "galacticcouncil/HydraDX-node",
+  "upstreamArg": "UPSTREAM_VERSION",
   "description": "CROSS-CHAIN LIQUIDITY PROTOCOL BUILT ON SUBSTRATE",
   "type": "service",
+  "mainService": "sidecar",
   "author": "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)",
+
   "contributors": [
     "HYRDA"
   ],
@@ -32,7 +36,10 @@
     "url": "https://github.com/androolloyd/hydra-dx-dappnode-app.git/issues"
   },
   "links": {
-    "homepage": "http://hydradx-node.dappnode"
+    "homepage": "https://hydradx.io",
+    "api": "http://sidecar.hydradx-node.dappnode",
+    "ui": "http://ipfs.dappnode:8080/ipns/dotapps.io/",
+    "gateway": "http://chain.hydradx-node.dappnode"
   },
   "license": "GPL v3"
 }

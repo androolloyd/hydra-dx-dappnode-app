@@ -1,18 +1,42 @@
 version: "3.4"
 services:
-  hydradx-node.public.dappnode.eth:
+  sidecar:
+    image: "docker.io/parity/substrate-api-sidecar:latest"
+    volumes:
+      - "./types:/root/types:ro"
+    depends_on:
+      - chain
+    environment:
+      - SAS_LOG_LEVEL=info
+      - SAS_LOG_JSON=false
+      - SAS_LOG_FILTER_RPC=false
+      - SAS_LOG_STRIP_ANSI=false
+      - SAS_SUBSTRATE_TYPES_BUNDLE=
+      - SAS_SUBSTRATE_TYPES_CHAIN=
+      - SAS_SUBSTRATE_TYPES_SPEC=
+      - SAS_SUBSTRATE_WS_URL=ws://chain:9944
+      - SAS_SUBSTRATE_TYPES=/root/types/typeDefs.json
+      - SAS_EXPRESS_BIND_HOST=0.0.0.0
+      - SAS_EXPRESS_PORT=7080
+    restart: unless-stopped
+    ports:
+      - "7080:7080"
+  chain:
     build:
       context: ./build
       args:
         UPSTREAM_VERSION: master
     volumes:
-    - "hydra_dx:/root/.local/share/hydra-dx"
+      - "hydra_dx:/root/.local/share/hydra-dx"
     environment:
-      - "EXTRA_OPTS=--chain=lerna"
-    image: "hydradx-node.public.dappnode.eth:0.1.1"
+      - "EXTRA_OPTS=--rpc-cors=all --ws-external"
+      - NODE_NAME=DAppNodeNodler
+      - CHAIN=lerna
     ports:
+      - "9944:9944"
       - "30303"
       - 30303/udp
     restart: unless-stopped
+    image: "chain.hydradx.public.dappnode.eth:0.1.1"
 volumes:
   hydra_dx: {}
