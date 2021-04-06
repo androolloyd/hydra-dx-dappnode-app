@@ -29,7 +29,7 @@ services:
       - "hydra_dx:/root/.local/share/hydra-dx"
     environment:
       - "EXTRA_OPTS=--rpc-cors=all --ws-external"
-      - NODE_NAME=DAppNodeNodler
+      - NAME=DAppNodeNodler
       - CHAIN=lerna
     ports:
       - "9944:9944"
