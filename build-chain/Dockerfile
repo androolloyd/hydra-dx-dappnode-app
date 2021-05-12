@@ -20,4 +20,4 @@ COPY --from=builder /hydra-dx-node /hydra-dx-node
 
 WORKDIR /hydra-dx-node
 
-ENTRYPOINT ./target/release/hydra-dx --name=${NAME} --chain=${CHAIN} ${EXTRA_OPTS}
+CMD ./target/release/hydra-dx --name=${NAME} --chain=${CHAIN} ${EXTRA_OPTS}
